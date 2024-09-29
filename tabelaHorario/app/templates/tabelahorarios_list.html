@@ -1,0 +1,35 @@
+{% extends 'base_generic.html' %}
+
+{% block title %}Lista de Tabela de Horários{% endblock %}
+
+{% block content %}
+  <h1>Tabela de Horários</h1>
+  <a class="btn btn-primary mb-2" href="{% url 'tabela_horario_create' %}">Adicionar Tabela de Horário</a>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Professor</th>
+        <th>Disciplina</th>
+        <th>Turma</th>
+        <th>Sala</th>
+        <th>Horário</th>
+        <th>Ações</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for tabelahorario in tabela_horario %}
+        <tr>
+          <td>{{ tabelahorario.professor.nome }}</td>
+          <td>{{ tabelahorario.disciplina.nome }}</td>
+          <td>{{ tabelahorario.turma.nome }}</td>
+          <td>{{ tabelahorario.sala.nome }}</td>
+          <td>{{ tabelahorario.horario }}</td>
+          <td>
+            <a class="btn btn-warning btn-sm" href="{% url 'tabela_horario_update' tabelahorario.pk %}">Editar</a>
+            <a class="btn btn-danger btn-sm" href="{% url 'tabela_horario_delete' tabelahorario.pk %}">Excluir</a>
+          </td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+{% endblock %}

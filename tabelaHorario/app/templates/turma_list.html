@@ -1,0 +1,29 @@
+{% extends 'base_generic.html' %}
+
+{% block title %}Lista de Turmas{% endblock %}
+
+{% block content %}
+  <h1>Turmas</h1>
+  <a class="btn btn-primary mb-2" href="{% url 'turma_create' %}">Adicionar Turma</a>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Nome</th>
+        <th>Número de Alunos</th>
+        <th>Ações</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for turma in turmas %}
+        <tr>
+          <td>{{ turma.nome }}</td>
+          <td>{{ turma.numero_alunos }}</td>
+          <td>
+            <a class="btn btn-warning btn-sm" href="{% url 'turma_update' turma.pk %}">Editar</a>
+            <a class="btn btn-danger btn-sm" href="{% url 'turma_delete' turma.pk %}">Excluir</a>
+          </td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+{% endblock %}

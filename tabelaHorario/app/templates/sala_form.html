@@ -1,0 +1,24 @@
+{% extends 'base_generic.html' %}
+
+{% block title %}{% if object %}Editar Sala{% else %}Adicionar Sala{% endif %}{% endblock %}
+
+{% block content %}
+  <h1>{% if object %}Editar{% else %}Adicionar{% endif %} Sala</h1>
+  <form method="post">
+    {% csrf_token %}
+    <div class="form-group">
+      {{ form.nome.label_tag }}
+      {{ form.nome }}
+    </div>
+    <div class="form-group">
+      {{ form.capacidade.label_tag }}
+      {{ form.capacidade }}
+    </div>
+    <div class="form-group">
+      {{ form.recursos.label_tag }}
+      {{ form.recursos }}
+    </div>
+    <button class="btn btn-success" type="submit">{% if object %}Atualizar{% else %}Salvar{% endif %}</button>
+    <a class="btn btn-secondary" href="{% url 'sala_list' %}">Cancelar</a>
+  </form>
+{% endblock %}

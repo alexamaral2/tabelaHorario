@@ -1,0 +1,29 @@
+{% extends 'base_generic.html' %}
+
+{% block title %}Lista de Professores{% endblock %}
+
+{% block content %}
+  <h1>Professores</h1>
+  <a class="btn btn-primary mb-2" href="{% url 'professor_create' %}">Adicionar Professor</a>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Nome</th>
+        <th>Carga Horária</th>
+        <th>Ações</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for professor in professores %}
+        <tr>
+          <td>{{ professor.nome }}</td>
+          <td>{{ professor.carga_horaria }}</td>
+          <td>
+            <a class="btn btn-warning btn-sm" href="{% url 'professor_update' professor.pk %}">Editar</a>
+            <a class="btn btn-danger btn-sm" href="{% url 'professor_delete' professor.pk %}">Excluir</a>
+          </td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+{% endblock %}

@@ -1,0 +1,31 @@
+{% extends 'base_generic.html' %}
+
+{% block title %}Lista de Horários{% endblock %}
+
+{% block content %}
+  <h1>Horários</h1>
+  <a class="btn btn-primary mb-2" href="{% url 'horario_create' %}">Adicionar Horário</a>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Dia da Semana</th>
+        <th>Hora de Início</th>
+        <th>Hora de Fim</th>
+        <th>Ações</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for horario in horarios %}
+        <tr>
+          <td>{{ horario.get_dia_da_semana_display }}</td>
+          <td>{{ horario.hora_inicio }}</td>
+          <td>{{ horario.hora_fim }}</td>
+          <td>
+            <a class="btn btn-warning btn-sm" href="{% url 'horario_update' horario.pk %}">Editar</a>
+            <a class="btn btn-danger btn-sm" href="{% url 'horario_delete' horario.pk %}">Excluir</a>
+          </td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+{% endblock %}

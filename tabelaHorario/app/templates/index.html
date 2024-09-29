@@ -1,0 +1,27 @@
+{% extends 'base_generic.html' %}
+
+{% block title %}Página Inicial{% endblock %}
+
+{% block content %}
+  <h1 style="text-align: center;">Bem-vindo ao Sistema de Gestão Acadêmica</h1>
+  <ul class="list-group">
+    <li class="list-group-item">
+      <a href="{% url 'professor_list' %}">Professores</a>
+    </li>
+    <li class="list-group-item">
+      <a href="{% url 'disciplina_list' %}">Disciplinas</a>
+    </li>
+    <li class="list-group-item">
+      <a href="{% url 'turma_list' %}">Turmas</a>
+    </li>
+    <li class="list-group-item">
+      <a href="{% url 'sala_list' %}">Salas</a>
+    </li>
+    <li class="list-group-item">
+      <a href="{% url 'horario_list' %}">Horários</a>
+    </li>
+    <li class="list-group-item">
+        <a href="{% url 'tabela_horario_list' %}">Tabela de Horários</a>
+    </li>
+  </ul>
+{% endblock %}

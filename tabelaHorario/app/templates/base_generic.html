@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Sistema Acadêmico{% endblock %}</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="{% url 'index' %}">Sistema Acadêmico</a>
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item"><a class="nav-link" href="{% url 'professor_list' %}">Professores</a></li>
+                <li class="nav-item"><a class="nav-link" href="{% url 'sala_list' %}">Salas</a></li>
+                <li class="nav-item"><a class="nav-link" href="{% url 'disciplina_list' %}">Disciplinas</a></li>
+                <li class="nav-item"><a class="nav-link" href="{% url 'turma_list' %}">Turmas</a></li>
+                <li class="nav-item"><a class="nav-link" href="{% url 'horario_list' %}">Horários</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        {% block content %}
+        {% endblock %}
+    </div>
+</body>
+</html>
