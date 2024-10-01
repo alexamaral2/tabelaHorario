@@ -3,9 +3,8 @@
 {% block title %}Lista de Salas{% endblock %}
 
 {% block content %}
-  <h1>Salas</h1>
-  <a class="btn btn-primary mb-2" href="{% url 'sala_create' %}">Adicionar Sala</a>
-  <table class="table table-striped">
+  <h1 class="titulo-pagina">Salas</h1>
+  <table class="table table-striped tabela-listagem">
     <thead>
       <tr>
         <th>Nome</th>
@@ -28,4 +27,5 @@
       {% endfor %}
     </tbody>
   </table>
+  <a class="btn btn-primary mb-2" href="{% url 'sala_create' %}">Adicionar Sala</a>
 {% endblock %}

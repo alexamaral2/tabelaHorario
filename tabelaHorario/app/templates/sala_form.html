@@ -3,18 +3,18 @@
 {% block title %}{% if object %}Editar Sala{% else %}Adicionar Sala{% endif %}{% endblock %}
 
 {% block content %}
-  <h1>{% if object %}Editar{% else %}Adicionar{% endif %} Sala</h1>
+  <h1 class="titulo-pagina">{% if object %}Editar{% else %}Adicionar{% endif %} Sala</h1>
   <form method="post">
     {% csrf_token %}
-    <div class="form-group">
+    <div class="form-group area-formulario">
       {{ form.nome.label_tag }}
       {{ form.nome }}
     </div>
-    <div class="form-group">
+    <div class="form-group area-formulario">
       {{ form.capacidade.label_tag }}
       {{ form.capacidade }}
     </div>
-    <div class="form-group">
+    <div class="form-group area-formulario">
       {{ form.recursos.label_tag }}
       {{ form.recursos }}
     </div>

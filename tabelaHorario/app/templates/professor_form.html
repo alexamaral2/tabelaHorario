@@ -3,14 +3,14 @@
 {% block title %}{% if object %}Editar Professor{% else %}Adicionar Professor{% endif %}{% endblock %}
 
 {% block content %}
-  <h1>{% if object %}Editar{% else %}Adicionar{% endif %} Professor</h1>
+  <h1 class="titulo-pagina">{% if object %}Editar{% else %}Adicionar{% endif %} Professor</h1>
   <form method="post">
     {% csrf_token %}
-    <div class="form-group">
+    <div class="form-group area-formulario">
       {{ form.nome.label_tag }}
       {{ form.nome }}
     </div>
-    <div class="form-group">
+    <div class="form-group area-formulario">
       {{ form.carga_horaria.label_tag }}
       {{ form.carga_horaria }}
     </div>

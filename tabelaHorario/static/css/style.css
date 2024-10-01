@@ -1,0 +1,67 @@
+.navegacao {
+  padding: 30px;
+  background-color: #007bff;
+}
+
+.titulo-site:any-link {
+  color: #fff;
+  font-size: 32px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.titulo-site:hover {
+  color: #e5e5e5;
+}
+
+.links-navegacao {
+  padding-left: 100px;
+}
+
+.item-menu-navegacao:any-link {
+  margin: 0 15px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.item-menu-navegacao:hover {
+  color: #e5e5e5;
+}
+
+.area-conteudo {
+  padding: 75px 0;
+  background-color: #eee;
+}
+
+.conteudo {
+  width: 700px;
+  padding: 75px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
+  background-color: #fff;
+}
+
+.titulo-pagina {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.area-formulario > * {
+  display: block;
+}
+
+.area-formulario > input, select {
+  width: 100%;
+}
+
+.tabela-listagem {
+  margin: 20px 0;
+}
+
+:focus {
+  outline: none;
+}
+
+.list-group-item {
+  border: 1px solid #007bff;
+}

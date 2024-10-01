@@ -3,9 +3,8 @@
 {% block title %}Lista de Disciplinas{% endblock %}
 
 {% block content %}
-  <h1>Disciplinas</h1>
-  <a class="btn btn-primary mb-2" href="{% url 'disciplina_create' %}">Adicionar Disciplina</a>
-  <table class="table table-striped">
+  <h1 class="titulo-pagina">Disciplinas</h1>
+  <table class="table table-striped tabela-listagem">
     <thead>
       <tr>
         <th>Nome</th>
@@ -26,4 +25,5 @@
       {% endfor %}
     </tbody>
   </table>
+  <a class="btn btn-primary mb-2" href="{% url 'disciplina_create' %}">Adicionar Disciplina</a>
 {% endblock %}

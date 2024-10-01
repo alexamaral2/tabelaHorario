@@ -3,9 +3,8 @@
 {% block title %}Lista de Turmas{% endblock %}
 
 {% block content %}
-  <h1>Turmas</h1>
-  <a class="btn btn-primary mb-2" href="{% url 'turma_create' %}">Adicionar Turma</a>
-  <table class="table table-striped">
+  <h1 class="titulo-pagina">Turmas</h1>
+  <table class="table table-striped tabela-listagem">
     <thead>
       <tr>
         <th>Nome</th>
@@ -26,4 +25,5 @@
       {% endfor %}
     </tbody>
   </table>
+  <a class="btn btn-primary mb-2" href="{% url 'turma_create' %}">Adicionar Turma</a>
 {% endblock %}

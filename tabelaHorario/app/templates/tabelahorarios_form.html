@@ -3,26 +3,26 @@
 {% block title %}{% if object %}Editar Tabela de Horários{% else %}Adicionar Tabela de Horários{% endif %}{% endblock %}
 
 {% block content %}
-  <h1>{% if object %}Editar{% else %}Adicionar{% endif %} Tabela de Horários</h1>
+  <h1 class="titulo-pagina">{% if object %}Editar{% else %}Adicionar{% endif %} Tabela de Horários</h1>
   <form method="post">
     {% csrf_token %}
-    <div class="form-group">
+    <div class="form-group area-formulario">
       {{ form.professor.label_tag }}
       {{ form.professor }}
     </div>
-    <div class="form-group">
+    <div class="form-group area-formulario">
       {{ form.disciplina.label_tag }}
       {{ form.disciplina }}
     </div>
-    <div class="form-group">
+    <div class="form-group area-formulario">
       {{ form.turma.label_tag }}
       {{ form.turma }}
     </div>
-    <div class="form-group">
+    <div class="form-group area-formulario">
       {{ form.sala.label_tag }}
       {{ form.sala }}
     </div>
-    <div class="form-group">
+    <div class="form-group area-formulario">
       {{ form.horario.label_tag }}
       {{ form.horario }}
     </div>
